@@ -5,29 +5,31 @@ const group = (str) => {
     const map = new Map();
     const result = [[]];
     let temp = [];
+    const obj = { k: "key", };
 
     for (i = 0; i < str.length; i++) {
         temp = str[i].split("");
-        if (map.size === 0) {
-            map.set(temp, i);
-            result[i] = temp.join();
-            console.log(map);
-            console.log(result);
+
+        if (map.has(temp)) {
+
+            continue;
+
         }
         else {
-            for (j = 0; j < temp.length; j++) {
-                if (map.has(temp[j])) {
-                    console.log(map);
-                    continue;
-
-                }
-                else {
-                    map.set(temp[j], i)
-                }
-                console.log(map);
-            }
+            map.set(temp, [str[i]]); // (-_-)
         }
+
+
     }
+    console.log(map);
 
 }
 group(str);
+
+
+/*
+
+
+
+*/
+
