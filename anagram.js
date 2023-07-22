@@ -14,7 +14,7 @@ const anagram = (s, t) => {
     var str2 = t.split("").sort().join("");
     console.log(str2);
 
-    if (str1 == str2) {
+    if (str1 === str2) {
         return true;
     }
     else {

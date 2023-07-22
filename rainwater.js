@@ -23,7 +23,7 @@ var maxArea = function (he) {
         else if (he[l] < he[r]) {
             console.log(he[l] + " e if" + he[r]);
 
-            if (max < ((r - l) * he[r])) {
+            if (max < ((r - l) * he[l])) {
                 max = (r - l) * he[l];
                 console.log("i m inside  " + (r - l * he[l]));
             }
@@ -36,4 +36,4 @@ var maxArea = function (he) {
 };
 
 
-console.log(maxArea([1, 0, 0, 0, 0, 0, 0, 2, 2]))
+console.log(maxArea([7, 0, 7, 9, 1, 9, 0, 2, 2]))
