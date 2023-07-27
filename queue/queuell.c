@@ -23,9 +23,14 @@ void push(int x)
     }
     else
     {
-        temp->next = head;
-        head = temp;
-    }
+        struct node *trav = head;
+        while (trav->next != NULL)
+        {
+            trav = trav->next;
+        }
+        trav->next = temp;
+        temp->next = NULL;
+    };
 }
 
 void print()
@@ -52,7 +57,9 @@ void getTop()
 
 void pop()
 {
+
     struct node *temp = head;
+
     head = temp->next;
     free(temp);
 }
@@ -72,9 +79,6 @@ int main()
     pop();
     print();
     push(1);
-    print();
-    pop();
-    pop();
     print();
 
     return 0;
