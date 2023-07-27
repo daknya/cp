@@ -57,6 +57,28 @@ void pop()
     free(temp);
 }
 
+void reverse()
+{
+    struct node *current = head;
+    struct node *next = NULL;
+    struct node *prev = NULL;
+
+    while (current != NULL)
+    {
+
+        // first store the next element address in next pointer
+        next = current->next;
+        // now break the link current->next  and point towar previous node
+        current->next = prev;
+        // now move the current pointer and prev pointer but prev first
+
+        prev = current;
+        current = next;
+    }
+
+    head = prev;
+}
+
 int main()
 {
     head = NULL;
@@ -68,14 +90,7 @@ int main()
     push(7);
     push(6);
     print();
-    getTop();
-    pop();
+    reverse();
     print();
-    push(1);
-    print();
-    pop();
-    pop();
-    print();
-
     return 0;
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="carousel">
+
+    </div>
+</body>
+<script>
+
+    let arr = [{
+        id: "1",
+        src: "heloo",
+        discription: "this is nothings",
+    }, {
+        id: "2",
+        src: "heloo",
+        discription: "this is nothings",
+    }
+        , {
+        id: "3",
+        src: "heloo",
+        discription: "this is nothings",
+    }
+    ]
+    const container = document.getElementsByClassName('carousel');
+
+    const element = arr.map((items, index) => {
+        return (
+            <div>
+                <h1> ${items.id}</h1>
+            </div>
+        )
+    })
+
+    console.log(element);
+    container.innerHtml = element;
+
+
+
+</script>
+
+</html>
