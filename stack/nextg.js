@@ -5,8 +5,6 @@
  */
 var nextGreaterElement = function (nums1, nums2) {
     let stack = [];
-
-
     var topindex;
     var res = [];
     let ans = []
