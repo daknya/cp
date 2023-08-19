@@ -4,9 +4,10 @@
  * @return {number}
  */
 var search = function (nums, target) {
+
     let l = 0;
     let r = nums.length - 1;
-    for (i = 0; i <= nums.length; i++) {
+    while (l <= r) {
         let mid = r - l / 2;
 
         if (nums[mid] == target) {
@@ -23,3 +24,5 @@ var search = function (nums, target) {
     return -1;
 
 };
+
+console.log(search([1, 2, 3, 4, 5, 6, 7, 8], 8));
